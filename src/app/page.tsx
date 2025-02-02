@@ -90,7 +90,7 @@ export default function GoogleDriveClone() {
                         {file.name}
                       </button>
                     ) : (
-                      <Link href={file.url || "#"} className="flex items-center text-gray-100 hover:text-blue-400">
+                      <Link href={file.url ?? "#"} className="flex items-center text-gray-100 hover:text-blue-400">
                         <FileIcon className="mr-3" size={20} />
                         {file.name}
                       </Link>
