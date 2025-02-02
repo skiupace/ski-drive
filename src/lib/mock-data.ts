@@ -19,4 +19,3 @@ export const mockFiles: File[] = [
   { id: "9", name: "Q4 Report.pptx", type: "file", url: "/files/q4-report.pptx", parent: "8", size: "5.2 MB" },
   { id: "10", name: "Budget.xlsx", type: "file", url: "/files/budget.xlsx", parent: "3", size: "1.5 MB" },
 ]
-
