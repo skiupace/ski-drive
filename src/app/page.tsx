@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import { mockFiles, mockFolders } from "../lib/mock-data";
-import { Folder, FileIcon, Upload, ChevronRight } from "lucide-react";
-import Link from "next/link";
+import { Upload, ChevronRight } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { FileRow, FolderRow } from "./file-row";
 
