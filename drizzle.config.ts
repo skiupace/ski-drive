@@ -11,7 +11,7 @@ export default {
     user: env.SINGLESTORE_USER,
     password: env.SINGLESTORE_PASS,
     database: env.SINGLESTORE_DATABASE,
-    ssl: {},
+    ssl: {}
   },
   tablesFilter: ["drive-clone_*"],
 } satisfies Config;
