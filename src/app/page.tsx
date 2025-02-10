@@ -23,16 +23,24 @@ export default function GoogleDriveClone() {
 
   const getBreadcrumbs = () => {
     const breadcrumbs = [];
-    let currentId = currentFolder;
+    // Always add the root folder first
+    const rootFolder = mockFolders.find((folder) => folder.id === "root");
 
-    while (currentId !== "root") {
-      const folder = mockFolders.find((file) => file.id === currentId);
+    // If we are not at the root, build the parent chain until we hit "root"
+    let currentId = currentFolder;
+    while (currentId && currentId !== "root") {
+      const folder = mockFolders.find((folder) => folder.id === currentId);
       if (folder) {
         breadcrumbs.unshift(folder);
-        currentId = folder.parent ?? "root";
+        currentId = folder.parent ?? "Root";
       } else {
         break;
       }
+    }
+
+    // Prepend the root folder if it isn't already there.
+    if (breadcrumbs[0]?.id !== "root") {
+      breadcrumbs.unshift(rootFolder);
     }
 
     return breadcrumbs;
