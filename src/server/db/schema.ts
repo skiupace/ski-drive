@@ -1,4 +1,4 @@
-import "server-only";
+// import "server-only";
 
 import { 
   int, 
@@ -15,7 +15,7 @@ export const createTable = singlestoreTableCreator(
 export const files = createTable(
   "files_table", 
   {
-    id: bigint("id", { mode: "bigint", unsigned: true }).primaryKey().autoincrement(),
+    id: bigint("id", { mode: "number", unsigned: true }).primaryKey().autoincrement(),
     name: text("name").notNull(),
     size: int("size").notNull(),
     url: text("url").notNull(),
@@ -28,7 +28,7 @@ export const files = createTable(
 export const folders = createTable(
   "folders_table", 
   {
-    id: bigint("id", { mode: "bigint", unsigned: true }).primaryKey().autoincrement(),
+    id: bigint("id", { mode: "number", unsigned: true }).primaryKey().autoincrement(),
     name: text("name").notNull(),
     parent: bigint("parent", {mode: "number", unsigned: true }),
   }, (t) => {
