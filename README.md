@@ -7,6 +7,6 @@
 - [x] Add auth.
 - [x] Add file uploading.
 - [x] Add analytics.
-- [ ] Make sure sort order is consistent.
+- [x] Make sure sort order is consistent.
 - [ ] Add delete button.
 - [ ] Real homepage + onboarding.
