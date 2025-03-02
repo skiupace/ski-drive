@@ -13,5 +13,5 @@ export default {
     database: env.SINGLESTORE_DATABASE,
     ssl: {},
   },
-  tablesFilter: ["drive-clone_*"],
+  tablesFilter: ["drive_clone_*"],
 } satisfies Config;
