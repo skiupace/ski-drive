@@ -21,7 +21,7 @@ export default function HomePage() {
       </header>
       <main className="flex-1 flex items-center justify-center text-center">
         <section className="w-full h-full flex items-center justify-center">
-          <div className="container px-4 md:px-6 mx-auto">
+          <div className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 rounded-md" /* className="container px-4 md:px-6 mx-auto" */>
             <SignInButton forceRedirectUrl={"/drive"} />
           </div>
         </section>
