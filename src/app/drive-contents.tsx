@@ -72,7 +72,7 @@ export default function DriveContents(props: {
           </ul>
         </div>
         <UploadButton 
-          endpoint="imageUploader" 
+          endpoint="driveUploader" 
           onClientUploadComplete={() => {
             navigate.refresh();
           }}
