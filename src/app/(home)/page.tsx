@@ -34,11 +34,21 @@ export default function HomePage() {
                 <div className="inline-block rounded-lg bg-blue-500/20 px-3 py-1 text-sm text-blue-400">
                   Introducing Ski Drive
                 </div>
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                {/* <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Cloud Storage, Simplified
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl">
                   Store, share, and collaborate on files and folders from any mobile device, tablet, or computer
+                </p> */}
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+                  <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    Cloud Storage, Simplified
+                  </span>
+                </h1>
+                <p className="mx-auto max-w-[700px] md:text-xl">
+                  <span className="text-gray-400">
+                    Store, share, and collaborate on files and folders from any mobile device, tablet, or computer
+                  </span>
                 </p>
               </div>
               <div className="space-x-4">

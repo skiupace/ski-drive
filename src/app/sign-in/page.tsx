@@ -19,8 +19,8 @@ export default function HomePage() {
           </Link>
         </nav>
       </header>
-      <main className="flex-1 text-center">
-        <section className="w-full py-12 md:py-24 lg:py-32">
+      <main className="flex-1 flex items-center justify-center text-center">
+        <section className="w-full h-full flex items-center justify-center">
           <div className="container px-4 md:px-6 mx-auto">
             <SignInButton forceRedirectUrl={"/drive"} />
           </div>
