@@ -1,12 +1,12 @@
 import { auth } from "@clerk/nextjs/server";
-import { Mountain, Cloud, Lock, Zap } from "lucide-react";
+import { Mountain, Cloud, Lock } from "lucide-react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
 export default function HomePage() {
   return (
     <>
-      <header className="px-4 lg:px-6 h-16 flex w-full items-center border-b border-gray-800">
+      <header className="fixed top-0 left-0 right-0 px-4 lg:px-6 h-16 flex w-full items-center border-gray-800">
         <Link className="flex items-center justify-center" href="/">
           <Mountain className="h-6 w-6 text-blue-400" />
           <span className="ml-2 text-xl font-bold">Ski Drive</span>
@@ -15,9 +15,6 @@ export default function HomePage() {
           <Link className="text-sm font-medium hover:text-blue-400" href="#">
             Features
           </Link>
-          {/* <Link className="text-sm font-medium hover:text-blue-400" href="#">
-            Pricing
-          </Link> */}
           <Link className="text-sm font-medium hover:text-blue-400" href="#">
             About
           </Link>
@@ -60,9 +57,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-800">
+      {/* <section className="w-full rounded-3xl py-12 md:py-24 lg:py-32 bg-gray-800">
         <div className="container px-4 md:px-6 mx-auto">
-          <div className="grid gap-6 lg:grid-cols-3 lg:gap-12">
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
             <FeatureCard
               icon={<Cloud className="h-8 w-8 text-blue-400" />}
               title="Seamless Cloud Storage"
@@ -73,15 +70,10 @@ export default function HomePage() {
               title="Secure & Private"
               description="Your files are encrypted and protected. Only you control who can access your data."
             />
-            <FeatureCard
-              icon={<Zap className="h-8 w-8 text-blue-400" />}
-              title="Lightning Fast"
-              description="Upload and download files at incredible speeds with our optimized infrastructure."
-            />
           </div>
         </div>
-      </section>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-gray-800">
+      </section> */}
+      <footer className="flex flex-col fixed left-0 right-0 bottom-0 py-6 w-full shrink-0 items-center px-4 md:px-6 border-gray-800">
         <p className="text-xs text-gray-400">© {new Date().getFullYear()} Ski Drive. All rights reserved.</p>
       </footer>
     </>
