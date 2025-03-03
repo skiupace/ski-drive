@@ -65,18 +65,53 @@ export const QUERIES = {
 };
 
 export const MUTATIONS = {
-    createFile: async function (input: {
-      file: {
-        name: string;
-        size: number;
-        url: string;
-        parent: number;
-      };
-      userId: string;
-    }) {
-      return await db.insert(filesSchema).values({
-        ...input.file,
-        ownerId: input.userId,
-      });
-    },
+  createFile: async function (input: {
+    file: {
+      name: string;
+      size: number;
+      url: string;
+      parent: number;
+    };
+    userId: string;
+  }) {
+    return await db.insert(filesSchema).values({
+      ...input.file,
+      ownerId: input.userId,
+    });
+  },
+
+  onboardUser: async function (userId: string) {
+    const rootFolder = await db.insert(foldersSchema).values({
+      name: "Root",
+      parent: null,
+      ownerId: userId
+    }).$returningId();
+
+    const rootFolderId = rootFolder[0]!.id;
+
+    await db.insert(foldersSchema).values([
+      {
+        name: "Work",
+        parent: rootFolderId,
+        ownerId: userId
+      },
+      {
+        name: "Images",
+        parent: rootFolderId,
+        ownerId: userId
+      },
+      {
+        name: "Documents",
+        parent: rootFolderId,
+        ownerId: userId
+      },
+      {
+        name: "Presentations",
+        parent: rootFolderId,
+        ownerId: userId
+      },
+    ]);
+
+    return rootFolderId;
+  }
 };
