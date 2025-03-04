@@ -59,6 +59,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      // TODO: Move this chunk of code into "features" page.
       {/* <section className="w-full rounded-3xl py-12 md:py-24 lg:py-32 bg-gray-800">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
@@ -83,14 +84,15 @@ export default function HomePage() {
   )
 }
 
-function FeatureCard({ icon, title, description }: any) {
-  return (
-    <div className="flex flex-col items-center space-y-4 text-center">
-      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gray-700">{icon}</div>
-      <div className="space-y-2">
-        <h3 className="text-xl font-bold">{title}</h3>
-        <p className="text-gray-400">{description}</p>
-      </div>
-    </div>
-  )
-}
+// *Will be used in features page, until creating that page, i'll just leave this here.
+// function FeatureCard({ icon, title, description }: any) {
+//   return (
+//     <div className="flex flex-col items-center space-y-4 text-center">
+//       <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gray-700">{icon}</div>
+//       <div className="space-y-2">
+//         <h3 className="text-xl font-bold">{title}</h3>
+//         <p className="text-gray-400">{description}</p>
+//       </div>
+//     </div>
+//   )
+// }

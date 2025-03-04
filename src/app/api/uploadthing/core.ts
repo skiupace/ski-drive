@@ -26,17 +26,22 @@ export const ourFileRouter = {
       // This code runs on your server before upload
       const user = await auth();
 
-      // If you throw, the user will not be able to upload
-      if (!user.userId) 
-        throw new UploadThingError("Unauthorized");
+      try {
+        // If you throw, the user will not be able to upload
+        if (!user.userId) 
+          throw new UploadThingError("Unauthorized");
 
-      const folder = await QUERIES.getFolderById(input.folderId);
+        const folder = await QUERIES.getFolderById(input.folderId);
 
-      if (!folder) 
-        throw new UploadThingError("Folder not found");
+        if (!folder) 
+          throw new UploadThingError("Folder not found");
 
-      if (folder.ownerId !== user.userId) 
-        throw new UploadThingError("Unauthorized");
+        if (folder.ownerId !== user.userId) 
+          throw new UploadThingError("Unauthorized");
+      } catch (error) {
+        if (error instanceof(UploadThingError))
+          console.log(error.code);
+      }
 
       // Whatever is returned here is accessible in onUploadComplete as `metadata`
       return { userId: user.userId, parentId: input.folderId };
@@ -53,7 +58,7 @@ export const ourFileRouter = {
           url: file.url,
           parent: metadata.parentId,
         },
-        userId: metadata.userId
+        userId: metadata.userId!
       });
 
       // !!! Whatever is returned here is sent to the clientside `onClientUploadComplete` callback
