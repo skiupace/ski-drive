@@ -30,7 +30,7 @@ export default function HomePage() {
 
         <div className="flex-1 flex w-full h-full py-12 items-center justify-center text-center">
           <div className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 rounded-md">
-            <SignInButton forceRedirectUrl={"/drive"} />
+            <SignInButton signUpForceRedirectUrl={"/drive"} />
           </div>
         </div>
       </section>

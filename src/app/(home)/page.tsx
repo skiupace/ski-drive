@@ -1,7 +1,7 @@
 import { auth } from "@clerk/nextjs/server";
-import { Mountain, Cloud, Lock } from "lucide-react";
-import Link from "next/link";
+import { Mountain } from "lucide-react";
 import { redirect } from "next/navigation";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -23,6 +23,7 @@ export default function HomePage() {
           </Link> */}
         </nav>
       </header>
+
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -57,6 +58,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       {/* <section className="w-full rounded-3xl py-12 md:py-24 lg:py-32 bg-gray-800">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
@@ -73,6 +75,7 @@ export default function HomePage() {
           </div>
         </div>
       </section> */}
+
       <footer className="flex flex-col fixed left-0 right-0 bottom-0 py-6 w-full shrink-0 items-center px-4 md:px-6 border-gray-800">
         <p className="text-xs text-gray-400">© {new Date().getFullYear()} Ski Drive. All rights reserved.</p>
       </footer>
