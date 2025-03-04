@@ -29,6 +29,7 @@ const config = {
         "argsIgnorePattern": "^_"
       }
     ],
+    "@typescript-eslint/only-throw-error": "off",
     "@typescript-eslint/require-await": "off",
     "@typescript-eslint/no-misused-promises": [
       "error",

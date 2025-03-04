@@ -59,7 +59,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      // TODO: Move this chunk of code into "features" page.
+      {/* TODO: Move this chunk of code into "features" page. */}
       {/* <section className="w-full rounded-3xl py-12 md:py-24 lg:py-32 bg-gray-800">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">

@@ -42,7 +42,7 @@ export default async function DrivePage() {
 
       <section className="w-full py-12 md:py-24 lg:py-32">
         <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-          Let's get you ready!
+          Let&apos;s get you ready!
         </h1>
 
         <div className="py-12">
