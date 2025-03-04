@@ -13,10 +13,9 @@
 
 ## Follow ups
 
-- [ ] Add folder deletion button.
-- [ ] Add folder creation button.
-- [ ] Add folder renames.
 - [x] Add access control.
+- [ ] Add folder creation/deletion button.
+- [ ] Add folder rename functionality.
 - [ ] Make "file view" page.
 - [ ] Gray out a row while it's being deleted.
 
