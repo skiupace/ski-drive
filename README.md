@@ -8,8 +8,8 @@
 - [x] Add file uploading.
 - [x] Add analytics.
 - [x] Make sure sort order is consistent.
-- [x] Add delete button.
-- [x] Real homepage + onboarding.
+- [x] Add delete file button.
+- [x] Add homepage + onboarding.
 
 ## Follow ups
 
